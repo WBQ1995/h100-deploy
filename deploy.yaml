@@ -1,0 +1,18 @@
+version: "2.0"
+type: node-port
+services:
+  vm:
+    image: filswan/ubuntu-ssh:22.04
+    env:
+      - sshkey=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCaKfQoc3kH6hFoAZ8UaGTXwymfxHgp/lG63nSeB4yb43hfcACndeo2c3kdTBBNseupnvg+ui+tRQ2BWlE+oWKnNwS4wsa9JmNk9+BSyq2SDiB1KCjw7AQiC/E4EMt78JeSoocbAaGluXj/g71/ZIEtOFlwt8/XWIfGxmcsSF58hJiRhfBTUD73GGHhiqeCucKVENj+vWki22pPYWA/w5H5Ukr2hMQDYmQVC95RL3CAX3nlzWP5ndnUDfecj35kYfdcbLZQRNaw6t+10n23xKoaUgVbVTfHsuS183MGNDXrRZH/ISOBSA59sZUiIwimTGIUyiNubGMXGwwsJLbCCAHB boqian@boqian-X570-GAMING-X
+      - username=nebula
+    expose:
+        - port: 22
+        - port: 8080
+        - port: 11434
+        - port: 38080
+        - port: 31434
+deployment:
+  vm:
+    lagrange:
+      count: 1
