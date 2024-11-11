@@ -12,6 +12,7 @@ services:
         - port: 11434
         - port: 38080
         - port: 31434
+        - port: 22
 deployment:
   vm:
     lagrange:
